@@ -11,7 +11,8 @@ jobs:
           echo test, and deploy your project.
       - name: Test
         run: ci/unit-test-app.sh
-          
-       
-        
-         
+      - name: Upload repo
+        uses: actions/upload-artifact@v4
+        with: 
+          name: code
+          path: .
